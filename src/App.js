@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import apiCalls from './apiCalls.js';
 
 class App extends Component {
   constructor() {
@@ -11,13 +11,13 @@ class App extends Component {
 }
 
   componentDidMount = () => {
-
+     console.log(apiCalls.getCocktails())
   }
 
   render() {
     return (
       <main className="App">
-        <Cocktails cocktails={this.state.cocktails}/>
+
       </main>
     );
   }
