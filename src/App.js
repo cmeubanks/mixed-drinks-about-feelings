@@ -10,9 +10,14 @@ class App extends Component {
   }
 }
 
+  componentDidMount = () => {
+
+  }
+
   render() {
     return (
       <main className="App">
+        <Cocktails cocktails={this.state.cocktails}/>
       </main>
     );
   }
