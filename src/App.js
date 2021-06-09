@@ -1,6 +1,6 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import apiCalls from './apiCalls.js';
 
 class App extends Component {
   constructor() {
@@ -11,13 +11,20 @@ class App extends Component {
 }
 
   componentDidMount = () => {
-
+     apiCalls.getCocktails()
+     .then(data => {
+       console.log(data.drinks)
+       this.setState({ cocktails: data.drinks })
+     })
+     .catch((error) => {
+       this.setState({ error: error })
+     })
   }
 
   render() {
     return (
       <main className="App">
-        <Cocktails cocktails={this.state.cocktails}/>
+      {this.state.cocktails === [] && <p> Loading... </p>}
       </main>
     );
   }
