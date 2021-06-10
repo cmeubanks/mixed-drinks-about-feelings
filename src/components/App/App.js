@@ -25,7 +25,8 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-      {this.state.cocktails === [] && <p> Loading... </p>}
+      {this.state.cocktails.length < 1 && <p> Loading... </p>}
+      <h1>Mixed Drinks About Feelings</h1>
       <Cocktails cocktails={this.state.cocktails} />
       </main>
     );
