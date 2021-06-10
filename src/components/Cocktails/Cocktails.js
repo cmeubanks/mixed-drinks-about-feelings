@@ -1,5 +1,6 @@
 import React from 'react';
 import Drink from '../Drink/Drink.js';
+import './Cocktails.css';
 
 const Cocktails = ({cocktails}) => {
   const drinkList = cocktails.map(cocktail => {

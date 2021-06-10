@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
-import apiCalls from './apiCalls.js';
-import Cocktails from './components/Cocktails/Cocktails.js';
+import apiCalls from '../../apiCalls.js';
+import Cocktails from '../Cocktails/Cocktails.js';
 
 class App extends Component {
   constructor() {
