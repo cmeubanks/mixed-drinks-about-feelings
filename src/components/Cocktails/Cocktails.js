@@ -1,14 +1,14 @@
 import React from 'react';
 import './Cocktails.css';
 
-const Cocktails = ({drinks}) => {
-  const drinkList = drinks.map(drink => {
+const Cocktails = ({cocktails}) => {
+  const drinkList = cocktails.map(cocktail => {
     return (
       <Drink
-        id={drink.id}
-        key={drink.id}
-        name={drink.strDrink}
-        image={drink.strDrinkThumb}
+        id={cocktail.id}
+        key={cocktail.id}
+        name={cocktail.strDrink}
+        image={cocktail.strDrinkThumb}
       />
     )
   })
@@ -19,3 +19,5 @@ const Cocktails = ({drinks}) => {
     </div>
   )
 }
+
+export default Cocktails;

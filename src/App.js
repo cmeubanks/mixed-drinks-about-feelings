@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import apiCalls from './apiCalls.js';
+import Cocktails from './components/Cocktails/Cocktails.js';
 
 class App extends Component {
   constructor() {
@@ -25,6 +26,7 @@ class App extends Component {
     return (
       <main className="App">
       {this.state.cocktails === [] && <p> Loading... </p>}
+      <Cocktails cocktails={this.state.cocktails} />
       </main>
     );
   }
