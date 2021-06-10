@@ -13,8 +13,10 @@ class Form extends Component {
     this.setState({value: event.target.value});
   }
 
-
-
+  submitMood = (event) => {
+    const myMood = this.state.value
+    this.props.getDrink(myMood)
+  }
 
   render() {
     const dropDown = emotions.map(emotion => {
@@ -30,6 +32,7 @@ class Form extends Component {
             {dropDown}
           </select>
         </label>
+        <button onClick={event => this.submitMood}>Get Drink</button>
       </form>
     )
   }

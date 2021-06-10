@@ -8,9 +8,14 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-     cocktails: []
+     cocktails: [],
+     mood: ''
+    }
   }
-}
+
+  getDrink = () => {
+
+  }
 
   componentDidMount = () => {
      apiCalls.getCocktails()
@@ -28,7 +33,7 @@ class App extends Component {
       <main className="App">
       {this.state.cocktails.length < 1 && <p> Loading... </p>}
       <h1>Mixed Drinks About Feelings</h1>
-      <Form />
+      <Form getDrink={getDrink}/>
       <Cocktails cocktails={this.state.cocktails} />
       </main>
     );
