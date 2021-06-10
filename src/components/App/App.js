@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import apiCalls from '../../apiCalls.js';
 import Cocktails from '../Cocktails/Cocktails.js';
 import Form from '../Form/Form.js';
+import emotions from '../../emotionData.js';
 
 class App extends Component {
   constructor() {
@@ -16,6 +17,7 @@ class App extends Component {
   componentDidMount = () => {
      apiCalls.getCocktails()
      .then(data => {
+
        this.setState({ cocktails: data.drinks })
      })
      .catch((error) => {
@@ -24,8 +26,9 @@ class App extends Component {
   }
 
   getDrink = (myMood) => {
-    const test = this.state.cocktails.find(drink => drink.idDrink === myMood)
-    console.log(test)
+    console.log('test', myMood)
+    const emoID = emotions.find(emotion => emotion.name === myMood)
+    console.log(emoID)
   }
 
   render() {

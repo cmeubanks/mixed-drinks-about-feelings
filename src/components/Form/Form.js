@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import emotions from '../../emotionData.js'
+import emotions from '../../emotionData.js';
 
 class Form extends Component {
   constructor() {
@@ -17,6 +17,11 @@ class Form extends Component {
     event.preventDefault();
     const myMood = this.state.mood
     this.props.getDrink(myMood)
+    this.clearInput();
+  }
+
+  clearInput = () => {
+    this.setState({mood: ''})
   }
 
   render() {
@@ -33,7 +38,7 @@ class Form extends Component {
             {dropDown}
           </select>
         </label>
-        <button onClick={event => this.submitMood}>Get Drink</button>
+        <button onClick={event => this.submitMood(event)}>Get Drink</button>
       </form>
     )
   }
