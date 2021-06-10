@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import emotions from '../../emotionData.js'
 
 class Form extends Component {
   constructor() {
@@ -8,16 +9,25 @@ class Form extends Component {
     }
   }
 
+  handleChange = (event) => {
+    this.setState({value: event.target.value});
+  }
+
+
+
+
   render() {
+    const dropDown = emotions.map(emotion => {
+      return(
+        <option key={emotion.id} id={emotion.id} value={emotion.name}>{emotion.name}</option>
+      )
+    })
     return (
       <form>
         <label>
           How are you feeling today:
           <select value={this.state.value} onChange={this.handleChange}>
-            <option value="grapefruit">Grapefruit</option>
-            <option value="lime">Lime</option>
-            <option value="coconut">Coconut</option>
-            <option value="mango">Mango</option>
+            {dropDown}
           </select>
         </label>
       </form>

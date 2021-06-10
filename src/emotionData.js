@@ -35,3 +35,5 @@ const emotions = [
     id: 14560
   },
 ]
+
+export default emotions;

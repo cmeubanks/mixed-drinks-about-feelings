@@ -6,8 +6,8 @@ const Cocktails = ({cocktails}) => {
   const drinkList = cocktails.map(cocktail => {
     return (
       <Drink
-        id={cocktail.id}
-        key={cocktail.id}
+        id={cocktail.idDrink}
+        key={cocktail.idDrink}
         name={cocktail.strDrink}
         image={cocktail.strDrinkThumb}
       />
