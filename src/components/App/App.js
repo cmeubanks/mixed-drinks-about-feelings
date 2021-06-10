@@ -9,18 +9,13 @@ class App extends Component {
     super();
     this.state = {
      cocktails: [],
-     mood: ''
+     drink: ''
     }
-  }
-
-  getDrink = () => {
-
   }
 
   componentDidMount = () => {
      apiCalls.getCocktails()
      .then(data => {
-       console.log(data.drinks)
        this.setState({ cocktails: data.drinks })
      })
      .catch((error) => {
@@ -28,12 +23,17 @@ class App extends Component {
      })
   }
 
+  getDrink = (myMood) => {
+    const test = this.state.cocktails.find(drink => drink.idDrink === myMood)
+    console.log(test)
+  }
+
   render() {
     return (
       <main className="App">
       {this.state.cocktails.length < 1 && <p> Loading... </p>}
       <h1>Mixed Drinks About Feelings</h1>
-      <Form getDrink={getDrink}/>
+      <Form getDrink={this.getDrink}/>
       <Cocktails cocktails={this.state.cocktails} />
       </main>
     );

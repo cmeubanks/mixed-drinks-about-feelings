@@ -5,16 +5,17 @@ class Form extends Component {
   constructor() {
     super();
     this.state = {
-        value: 'mood'
+        mood: ''
     }
   }
 
   handleChange = (event) => {
-    this.setState({value: event.target.value});
+    this.setState({mood: event.target.value});
   }
 
   submitMood = (event) => {
-    const myMood = this.state.value
+    event.preventDefault();
+    const myMood = this.state.mood
     this.props.getDrink(myMood)
   }
 
