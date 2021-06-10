@@ -2,6 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import apiCalls from '../../apiCalls.js';
 import Cocktails from '../Cocktails/Cocktails.js';
+import Form from '../Form/Form.js';
 
 class App extends Component {
   constructor() {
@@ -27,6 +28,7 @@ class App extends Component {
       <main className="App">
       {this.state.cocktails.length < 1 && <p> Loading... </p>}
       <h1>Mixed Drinks About Feelings</h1>
+      <Form />
       <Cocktails cocktails={this.state.cocktails} />
       </main>
     );
