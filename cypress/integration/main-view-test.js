@@ -23,4 +23,19 @@ describe('Emotion Question View', () => {
     });
   });
 
+  describe('Form User Flow', () => {
+
+    it('should load a data set of emotions in form drop down', () => {
+      cy.get('.select')
+        .select('happy')
+        .should('have.value', 'happy')
+      .get('.select')
+        .select('sad')
+        .should('have.value', 'sad')
+      .get('.select')
+        .select('confused')
+        .should('have.value', 'confused')
+    })
+  })
+
 });
