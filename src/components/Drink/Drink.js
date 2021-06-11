@@ -1,12 +1,12 @@
 import React from 'react';
 import './Drink.css';
 
-const Drink = ({id, name, image}) => {
+const Drink = ({drink}) => {
   return (
-    <article className='drink' id={id}>
-      <h2>{name}</h2>
+    <article className='drink' id={drink.idDrink}>
+      <h2>{drink.strDrink}</h2>
       <div className='bev-img'>
-        <img src={image} alt='drink' />
+        <img src={drink.strDrinkThumb} alt='drink' />
       </div>
     </article>
   )

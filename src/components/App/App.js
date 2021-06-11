@@ -37,7 +37,7 @@ class App extends Component {
       {this.state.cocktails.length < 1 && <p> Loading... </p>}
       <h1>Mixed Drinks About Feelings</h1>
       <Form getDrink={this.getDrink}/>
-      <Cocktails cocktails={this.state.cocktails} />
+      <Cocktails drink={this.state.drink} />
       </main>
     );
   }
