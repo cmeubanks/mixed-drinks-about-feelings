@@ -1,4 +1,5 @@
-[
+{
+  "drinks": [
       {
           "strDrink": "Old Fashioned",
           "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/vrwquq1478252802.jpg",
@@ -15,3 +16,4 @@
           "idDrink": "178318"
       }
   ]
+}
