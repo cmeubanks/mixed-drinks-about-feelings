@@ -28,7 +28,7 @@ class App extends Component {
   getDrink = (myMood) => {
     const emo = emotions.find(emotion => emotion.name === myMood)
     const yourDrink = this.state.cocktails.find(drink => parseInt(drink.idDrink) === emo.id)
-    console.log(yourDrink)
+    this.setState({drink: yourDrink})
   }
 
   render() {
