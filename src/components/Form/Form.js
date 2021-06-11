@@ -32,13 +32,13 @@ class Form extends Component {
     })
     return (
       <form>
-        <label>
+        <label className='label'>
           How are you feeling today:
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select className='select' value={this.state.value} onChange={this.handleChange}>
             {dropDown}
           </select>
         </label>
-        <button onClick={event => this.submitMood(event)}>Get Drink</button>
+        <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
       </form>
     )
   }
