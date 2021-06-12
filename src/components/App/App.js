@@ -52,9 +52,9 @@ class App extends Component {
           <NavLink to='/favorites' className='nav'>Favorites</NavLink>
         </header>
         <main>
-          <Route exact path="/" render={() => <Form getDrink={this.getDrink}/> } />
           {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
           {this.state.error && <p className='errorMess'>{this.state.error}</p>}
+          <Route exact path="/" render={() => <Form getDrink={this.getDrink}/> } />
           <Route exact path="/" render={() => <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>} />
           <Route path="/favorites" render={() => <FavDrinks favDrinks={this.state.favorites} favoriteDrink={this.favoriteDrink}/>} />
         </main>
