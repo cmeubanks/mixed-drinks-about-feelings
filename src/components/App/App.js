@@ -1,9 +1,9 @@
 import './App.css';
 import React, { Component } from 'react';
 import apiCalls from '../../apiCalls.js';
+import emotions from '../../emotionData.js';
 import Drink from '../Drink/Drink.js';
 import Form from '../Form/Form.js';
-import emotions from '../../emotionData.js';
 
 class App extends Component {
   constructor() {
@@ -43,13 +43,18 @@ class App extends Component {
 
   render() {
     return (
-      <main className="App">
-      <h1>Mixed Drinks About Feelings</h1>
-      <Form getDrink={this.getDrink}/>
-      {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
-      {this.state.error && <p className='errorMess'>{this.state.error}</p>}
-      {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
-      </main>
+      <div className="App">
+        <header>
+          <h1>Mixed Drinks About Feelings</h1>
+          <button>Favorites</button>
+        </header>
+        <main>
+          <Form getDrink={this.getDrink}/>
+          {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
+          {this.state.error && <p className='errorMess'>{this.state.error}</p>}
+          {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
+        </main>
+      </div>
     );
   }
 }
