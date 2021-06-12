@@ -26,6 +26,10 @@ class App extends Component {
   }
 
   getDrink = (myMood) => {
+    this.setState({error: ''})
+    if(!myMood){
+      return this.setState({error: 'Choose valid emotion'})
+    }
     const emo = emotions.find(emotion => emotion.name === myMood)
     const yourDrink = this.state.cocktails.find(drink => parseInt(drink.idDrink) === emo.id)
     this.setState({drink: yourDrink})
@@ -34,10 +38,11 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-      {this.state.cocktails.length < 1 && <p> Loading... </p>}
       <h1>Mixed Drinks About Feelings</h1>
       <Form getDrink={this.getDrink}/>
-      <Cocktails drink={this.state.drink} />
+      {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
+      {this.state.error && <p className='errorMess'>{this.state.error}</p>}
+      {!this.state.error && <Cocktails drink={this.state.drink} />}
       </main>
     );
   }

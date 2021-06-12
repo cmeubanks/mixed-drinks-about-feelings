@@ -1,5 +1,10 @@
 const emotions = [
   {
+    name: '',
+    drink: '',
+    id: 0
+  },
+  {
     name: 'confused',
     drink: '155 Belmont',
     id: 15346
