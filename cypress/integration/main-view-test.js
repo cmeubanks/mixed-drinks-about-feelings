@@ -36,6 +36,18 @@ describe('Emotion Question View', () => {
         .select('confused')
         .should('have.value', 'confused')
     })
+
+    it('should display a drink from fetched data when an emotion is submitted', () => {
+      cy.get('.select')
+        .select('happy')
+        .should('have.value', 'happy')
+      .get('.drinkBtn')
+        .click()
+      .get('article').get('h2')
+        .contains('Old Pal')
+      .get('img')
+        .should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/x03td31521761009.jpg')
+    })
   })
 
 });
