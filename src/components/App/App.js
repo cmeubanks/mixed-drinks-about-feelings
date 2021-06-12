@@ -1,7 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import apiCalls from '../../apiCalls.js';
-import Cocktails from '../Cocktails/Cocktails.js';
+import Drink from '../Drink/Drink.js';
 import Form from '../Form/Form.js';
 import emotions from '../../emotionData.js';
 
@@ -42,7 +42,7 @@ class App extends Component {
       <Form getDrink={this.getDrink}/>
       {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
       {this.state.error && <p className='errorMess'>{this.state.error}</p>}
-      {!this.state.error && <Cocktails drink={this.state.drink} />}
+      {!this.state.error && <Drink drink={this.state.drink} />}
       </main>
     );
   }
