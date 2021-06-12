@@ -4,7 +4,6 @@ import './Drink.css';
 const Drink = ({drink, favoriteDrink}) => {
   return (
     <article className='drink' id={drink.idDrink}>
-    {!drink && <p className='drinkGreet'>Your drink coming soon...</p>}
       <h2>{drink.strDrink}</h2>
       <div className='bev-img'>
         {drink && <img src={drink.strDrinkThumb} alt='drink' />}

@@ -37,8 +37,7 @@ class App extends Component {
   }
 
   favoriteDrink = (id) => {
-    const yourDrink = this.state.cocktails.find(drink => parseInt(drink.idDrink) === id)
-    console.log(yourDrink)
+    const yourDrink = this.state.cocktails.find(drink => drink.idDrink === id)
     this.setState({favorites: [...this.state.favorites, yourDrink]})
   }
 
@@ -49,7 +48,7 @@ class App extends Component {
       <Form getDrink={this.getDrink}/>
       {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
       {this.state.error && <p className='errorMess'>{this.state.error}</p>}
-      {!this.state.error && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
+      {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
       </main>
     );
   }
