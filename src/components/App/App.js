@@ -38,6 +38,7 @@ class App extends Component {
 
   favoriteDrink = (id) => {
     const yourDrink = this.state.cocktails.find(drink => parseInt(drink.idDrink) === id)
+    console.log(yourDrink)
     this.setState({favorites: [...this.state.favorites, yourDrink]})
   }
 
