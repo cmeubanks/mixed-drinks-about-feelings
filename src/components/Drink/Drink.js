@@ -1,7 +1,7 @@
 import React from 'react';
 import './Drink.css';
 
-const Drink = ({drink}) => {
+const Drink = ({drink, favoriteDrink}) => {
   return (
     <article className='drink' id={drink.idDrink}>
     {!drink && <p className='drinkGreet'>Your drink coming soon...</p>}
@@ -9,6 +9,7 @@ const Drink = ({drink}) => {
       <div className='bev-img'>
         {drink && <img src={drink.strDrinkThumb} alt='drink' />}
       </div>
+      <button className='favBtn' onClick={() => favoriteDrink(drink.idDrink)}>Favorite</button>
     </article>
   )
 }
