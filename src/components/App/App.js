@@ -1,16 +1,19 @@
 import './App.css';
 import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom';
 import apiCalls from '../../apiCalls.js';
-import Cocktails from '../Cocktails/Cocktails.js';
-import Form from '../Form/Form.js';
 import emotions from '../../emotionData.js';
+import Drink from '../Drink/Drink.js';
+import Form from '../Form/Form.js';
+import FavDrinks from '../FavDrinks/FavDrinks.js';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
      cocktails: [],
-     drink: ''
+     drink: '',
+     favorites: []
     }
   }
 
@@ -35,15 +38,27 @@ class App extends Component {
     this.setState({drink: yourDrink})
   }
 
+  favoriteDrink = (id) => {
+    const yourDrink = this.state.cocktails.find(drink => drink.idDrink === id)
+    this.setState({favorites: [...this.state.favorites, yourDrink]})
+  }
+
   render() {
     return (
-      <main className="App">
-      <h1>Mixed Drinks About Feelings</h1>
-      <Form getDrink={this.getDrink}/>
-      {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
-      {this.state.error && <p className='errorMess'>{this.state.error}</p>}
-      {!this.state.error && <Cocktails drink={this.state.drink} />}
-      </main>
+      <div className="App">
+        <header>
+          <h1>Mixed Drinks About Feelings</h1>
+          <NavLink to='/' className='nav'>Home</NavLink>
+          <NavLink to='/favorites' className='nav'>Favorites</NavLink>
+        </header>
+        <main>
+          {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
+          {this.state.error && <p className='errorMess'>{this.state.error}</p>}
+          <Route exact path="/" render={() => <Form getDrink={this.getDrink}/> } />
+          <Route exact path="/" render={() => <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>} />
+          <Route path="/favorites" render={() => <FavDrinks favDrinks={this.state.favorites} favoriteDrink={this.favoriteDrink}/>} />
+        </main>
+      </div>
     );
   }
 }
