@@ -40,7 +40,11 @@ class App extends Component {
 
   favoriteDrink = (id) => {
     const yourDrink = this.state.cocktails.find(drink => drink.idDrink === id)
-    this.setState({favorites: [...this.state.favorites, yourDrink]})
+    if(this.state.favorites.includes(yourDrink)){
+      return
+    } else {
+      return this.setState({favorites: [...this.state.favorites, yourDrink]})
+    }
   }
 
   render() {
