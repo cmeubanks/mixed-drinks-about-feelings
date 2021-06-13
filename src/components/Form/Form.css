@@ -1,3 +1,21 @@
+form {
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+}
+
+.label span::before {
+  content: "\A";
+  white-space: pre;
+}
+
 .label {
+  background-image: url("./cloud.png");
+  background-size: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Shadows Into Light Two', cursive;
+  margin-top: 20px;
+  font-size: 5em;
+  color: #BC8DA0;
 }

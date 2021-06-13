@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css';
 import emotions from '../../emotionData.js';
 
 class Form extends Component {
@@ -33,7 +34,7 @@ class Form extends Component {
     return (
       <form>
         <label className='label'>
-          How are you feeling today:
+          How are you <span>feeling today:</span>
           <select className='select' value={this.state.value} onChange={this.handleChange}>
             {dropDown}
           </select>
