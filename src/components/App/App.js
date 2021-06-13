@@ -58,7 +58,7 @@ class App extends Component {
           <NavLink to='/' className='nav'>Home</NavLink>
           <NavLink to='/favorites' className='nav'>Favorites</NavLink>
         </header>
-        <main>
+        <main className='main-css'>
           <Route exact path="/" render={() => <Form getDrink={this.getDrink}/>}/>
           <Route exact path="/" render={() => {
             return (

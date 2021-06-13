@@ -32,6 +32,7 @@ class Form extends Component {
       )
     })
     return (
+    <div className='form-container'>
       <form>
         <label className='label'>
           How are you <span>feeling today:</span>
@@ -39,8 +40,9 @@ class Form extends Component {
             {dropDown}
           </select>
         </label>
-        <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
       </form>
+      <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
+    </div>
     )
   }
 }
