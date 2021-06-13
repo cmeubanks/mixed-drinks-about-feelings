@@ -51,8 +51,10 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <h1>Mixed Drinks About Feelings</h1>
-          <img src='./heart.png' alt='heart'/>
+          <div className='title'>
+            <h1>Mixed Drinks About Feelings</h1>
+            <img src='./heart.png' alt='heart'/>
+          </div>
           <NavLink to='/' className='nav'>Home</NavLink>
           <NavLink to='/favorites' className='nav'>Favorites</NavLink>
         </header>
