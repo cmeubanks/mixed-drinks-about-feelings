@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Form.css';
 import emotions from '../../emotionData.js';
 
@@ -48,3 +49,7 @@ class Form extends Component {
 }
 
 export default Form;
+
+Form.propTypes = {
+  getDrink: PropTypes.func.isRequired
+}

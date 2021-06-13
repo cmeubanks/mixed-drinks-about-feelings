@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import './Drink.css';
 
 const Drink = ({drink, favoriteDrink}) => {
