@@ -19,11 +19,6 @@ class Form extends Component {
     event.preventDefault();
     const myMood = this.state.mood
     this.props.getDrink(myMood)
-    this.clearInput();
-  }
-
-  clearInput = () => {
-    this.setState({mood: ''})
   }
 
   render() {

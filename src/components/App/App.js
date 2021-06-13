@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
+import { Route, NavLink, Switch, Redirect} from 'react-router-dom';
 import apiCalls from '../../apiCalls.js';
 import emotions from '../../emotionData.js';
 import Drink from '../Drink/Drink.js';
@@ -20,7 +20,6 @@ class App extends Component {
   componentDidMount = () => {
      apiCalls.getCocktails()
      .then(data => {
-
        this.setState({ cocktails: data.drinks })
      })
      .catch((error) => {
@@ -31,11 +30,11 @@ class App extends Component {
   getDrink = (myMood) => {
     this.setState({error: ''})
     if(!myMood){
-      return this.setState({error: 'Choose valid emotion'})
+      return this.setState({drink:'', error: 'Choose valid emotion'})
     }
     const emo = emotions.find(emotion => emotion.name === myMood)
     const yourDrink = this.state.cocktails.find(drink => parseInt(drink.idDrink) === emo.id)
-    this.setState({drink: yourDrink})
+    this.setState({ drink: yourDrink })
   }
 
   favoriteDrink = (id) => {
@@ -60,10 +59,10 @@ class App extends Component {
         </header>
         <main className='main-css'>
           <Switch>
-            <Route exact path="/" render={() => <Form getDrink={this.getDrink}/>}/>
             <Route exact path="/" render={() => {
               return (
               <div className='drink-container'>
+                <Form getDrink={this.getDrink}/>
                 {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
                 {this.state.error && <p className='errorMess'>{this.state.error}</p>}
                 {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
