@@ -1,6 +1,6 @@
 import './App.css';
 import React, { Component } from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import apiCalls from '../../apiCalls.js';
 import emotions from '../../emotionData.js';
 import Drink from '../Drink/Drink.js';
@@ -59,17 +59,20 @@ class App extends Component {
           <NavLink to='/favorites' className='nav'>Favorites</NavLink>
         </header>
         <main className='main-css'>
-          <Route exact path="/" render={() => <Form getDrink={this.getDrink}/>}/>
-          <Route exact path="/" render={() => {
-            return (
-            <div className='drink-container'>
-              {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
-              {this.state.error && <p className='errorMess'>{this.state.error}</p>}
-              {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
-            </div>
-            )
-          }} />
-          <Route path="/favorites" render={() => <FavDrinks favDrinks={this.state.favorites} favoriteDrink={this.favoriteDrink}/>} />
+          <Switch>
+            <Route exact path="/" render={() => <Form getDrink={this.getDrink}/>}/>
+            <Route exact path="/" render={() => {
+              return (
+              <div className='drink-container'>
+                {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
+                {this.state.error && <p className='errorMess'>{this.state.error}</p>}
+                {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
+              </div>
+              )
+            }} />
+            <Route path="/favorites" render={() => <FavDrinks favDrinks={this.state.favorites} favoriteDrink={this.favoriteDrink}/>} />
+            <Redirect to='/' />
+          </Switch>
         </main>
       </div>
     );

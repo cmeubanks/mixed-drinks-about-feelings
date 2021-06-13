@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Drink.css';
 
 const Drink = ({drink, favoriteDrink}) => {
@@ -14,3 +15,12 @@ const Drink = ({drink, favoriteDrink}) => {
 }
 
 export default Drink;
+
+Drink.propTypes = {
+  favoriteDrink: PropTypes.func.isRequired,
+  drink: PropTypes.shape({
+   idDrink: PropTypes.string,
+   strDrink: PropTypes.string,
+   strDrinkThumb: PropTypes.string
+ }).isRequired
+}
