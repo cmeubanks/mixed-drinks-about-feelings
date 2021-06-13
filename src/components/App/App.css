@@ -16,6 +16,7 @@ header {
   height: 100%;
   width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .title > img {
@@ -32,5 +33,7 @@ h1 {
 .nav {
   font-family: 'Shadows Into Light Two', cursive;
   font-size: 3em;
-  color: #F4F3EE;
+  margin-right: 15px;
+  margin-left: 30px;
+  color: #6D9F71;
 }
