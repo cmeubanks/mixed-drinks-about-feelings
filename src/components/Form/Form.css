@@ -2,22 +2,24 @@ form {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  align-items: flex-end;
 }
 
 .question-container {
   display: flex;
   justify-content: center;
+  margin-right: 10px;
 }
 
 
-.label span::before {
+/* .label span::before {
   content: "\A";
   white-space: pre;
-}
+} */
 
 .label {
   font-family: 'Shadows Into Light Two', cursive;
-  font-size: 5em;
+  font-size: 3.5em;
   box-sizing: border-box;
   color: #BC8DA0;
 }
@@ -26,9 +28,8 @@ form {
   font-family: 'Shadows Into Light Two', cursive;
   background-color: transparent;
   border-radius: 100px;
-  margin-top: 200px;
-  width: 20%;
   height: 20%;
+  margin-left: 10px;
   font-size: 50px;
   color: #6D9F71;
   border:10px solid #6D9F71;

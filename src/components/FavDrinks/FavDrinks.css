@@ -1,5 +1,14 @@
 .cocktails {
-  width: 80%;
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.fav-error {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 3em;
+  font-weight: bolder;
+  color: #6D9F71;
+  text-align: center;
 }
