@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import './Drink.css';
 
 const Drink = ({drink, favoriteDrink}) => {
-  console.log(drink)
   return (
     <article className='drink' id={drink.idDrink}>
       <h2>{drink.strDrink}</h2>
