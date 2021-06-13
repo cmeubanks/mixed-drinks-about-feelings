@@ -1,7 +1,10 @@
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 30vh;
+  width: 100vw;
 }
 
 .label span::before {
@@ -11,11 +14,18 @@ form {
 
 .label {
   background-image: url("./cloud.png");
-  background-size: 400px;
+  background-size: 35vw;
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'Shadows Into Light Two', cursive;
+  width: 60vw;
   margin-top: 20px;
   font-size: 5em;
   color: #BC8DA0;
+}
+
+.select {
+  height: 8vh;
+  width: 20vw;
+  margin-left: 20px;
 }
