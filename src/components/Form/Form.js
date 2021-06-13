@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css';
 import emotions from '../../emotionData.js';
 
 class Form extends Component {
@@ -31,15 +32,17 @@ class Form extends Component {
       )
     })
     return (
+    <div className='form-container'>
       <form>
         <label className='label'>
-          How are you feeling today:
+          How are you <span>feeling today:</span>
           <select className='select' value={this.state.value} onChange={this.handleChange}>
             {dropDown}
           </select>
         </label>
-        <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
       </form>
+      <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
+    </div>
     )
   }
 }
