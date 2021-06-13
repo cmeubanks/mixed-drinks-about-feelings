@@ -1,11 +1,14 @@
-.form-container {
+form {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.question-container {
   display: flex;
   justify-content: center;
 }
 
-form {
-  box-sizing: border-box;
-}
 
 .label span::before {
   content: "\A";
