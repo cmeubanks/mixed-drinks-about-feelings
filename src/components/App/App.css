@@ -5,3 +5,11 @@
   align-content: center;
   flex-direction: column;
 }
+
+h1 {
+  font-family: 'Londrina Outline', cursive;
+}
+
+.nav {
+  font-family: 'Faster One', cursive;
+}
