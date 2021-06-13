@@ -20,7 +20,6 @@ class App extends Component {
   componentDidMount = () => {
      apiCalls.getCocktails()
      .then(data => {
-       console.log(data)
        this.setState({ cocktails: data.drinks })
      })
      .catch((error) => {
@@ -35,9 +34,7 @@ class App extends Component {
     }
     const emo = emotions.find(emotion => emotion.name === myMood)
     const yourDrink = this.state.cocktails.find(drink => parseInt(drink.idDrink) === emo.id)
-    console.log(yourDrink)
     this.setState({ drink: yourDrink })
-    console.log(this.state)
   }
 
   favoriteDrink = (id) => {

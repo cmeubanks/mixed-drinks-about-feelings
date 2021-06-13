@@ -4,7 +4,6 @@ import './FavDrinks.css';
 import Drink from '../Drink/Drink.js';
 
 const FavDrinks = ({favDrinks, favoriteDrink}) => {
-  console.log(favDrinks)
   const cocktails = favDrinks.map(cocktail => {
     return (
       <Drink
