@@ -15,7 +15,7 @@ const FavDrinks = ({favDrinks, favoriteDrink}) => {
   })
 
   return(
-    <div className='drinks-container'>
+    <div className='cocktails'>
       {!cocktails && <p> No Drinks Yet </p>}
       {cocktails}
     </div>
