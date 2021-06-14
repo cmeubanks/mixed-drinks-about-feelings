@@ -2,7 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Drink.css';
 
-const Drink = ({drink, favoriteDrink}) => {
+const Drink = ({drink, favoriteDrink, favDrinks}) => {
+  const styleFavorite = () => {
+    if (favDrinks) {
+      const faved = favDrinks.filter(fave => fave.idDrink === drink.idDrink)
+      if (faved.length > 0) {
+        return ‘favBtn faved’
+      }
+    }
+    return ‘favBtn’
+  }
+
   return (
     <article className='drink' id={drink.idDrink}>
       <div heading-container>
@@ -11,7 +21,7 @@ const Drink = ({drink, favoriteDrink}) => {
       <div className='bev-img'>
         {drink && <img className='drink-img' src={drink.strDrinkThumb} alt='drink' />}
       </div>
-      <button className='favBtn' onClick={() => favoriteDrink(drink.idDrink)}>Favorite</button>
+      <button className={this.styleFavorite} onClick={() => favoriteDrink(drink.idDrink)}>Favorite</button>
     </article>
   )
 }

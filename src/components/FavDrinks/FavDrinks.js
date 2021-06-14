@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import './FavDrinks.css';
 import Drink from '../Drink/Drink.js';
 
-const FavDrinks = ({favDrinks, favoriteDrink}) => {
+const FavDrinks = ({favDrinks, favoriteDrink, favDrinks}) => {
   const cocktails = favDrinks.map(cocktail => {
     return (
       <Drink
         key={cocktail.idDrink}
         drink={cocktail}
         favoriteDrink={favoriteDrink}
+        favDrinks={favDrinks}
       />
     )
   })

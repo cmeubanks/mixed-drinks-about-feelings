@@ -32,6 +32,10 @@ div > h2 {
   border:5px solid #6D9F71;
 }
 
+.faved {
+  color: red;
+}
+
 @media screen and (max-width: 1440px) {
   div > h2 {
     font-size: 3em;
