@@ -1,7 +1,4 @@
-#### MVP: Application reccomends a drink based on a user's emotion. The user can input their emotion and a drink is reccomended. User can favortie their reccomended drink and it is added to a favorite's page.
-
-
-# Rancid Tomatillos
+# Mixed Drinks About Feelings
 
 ## Table of Contents
 * [Description](#description)
@@ -13,19 +10,29 @@
 
 ## Description
 
-Searching for the next flick to watch while you become one with your couch? Checkout the Rancid Tomatillos application!
+Calling all beverage (and even non-beverage) enthusiasts. Are you tired of asking the bartender, "What's your best cocktail?". Do you often times find yourself searching for drink inspiration? You've come to the right place! Our application provides a drink reccomendation based on your mood. Users can also favorite a drink to save for later should they like the recommendation.
 
-Users can browse through a collection of today's new movies and see what peaks their interest based on detailed movie descriptions and ratings. If a user enjoyed the content they can bookmark a flick and revisit the details at a later time.
+## Learning Goals
+
+For this project, I was challenged to create a fully functionation front-end application in 6 days that implements the following learning goals:
+
+- React
+- Router
+- Asynchronous JavaScript
+- End to end testing with Cypress
+
+*Minimum Viable Product*:  Application reccomends a drink based on a user's emotion. The user can input their emotion and a drink is reccomended. User can favortie their reccomended drink and it is added to a favorite's page.
 
 
-### Notable Features
+
+## Notable Features
 
 
 ## Installation
 
 * The application is deployed to Heroku, to view the live application: https://mixeddrinksaboutfeelings.herokuapp.com/
 
-* To view our application on your local device:
+* To view the application on your local device:
 
 1. Clone down this application
 2. Enter `npm i` in your terminal
@@ -34,6 +41,8 @@ Users can browse through a collection of today's new movies and see what peaks t
 
 
 ## Walkthrough
+
+API Incorporate: https://www.thecocktaildb.com/api.php?ref=apilist.fun
 
 
 ## Authors
