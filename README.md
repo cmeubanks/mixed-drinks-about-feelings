@@ -2,6 +2,7 @@
 
 ## Table of Contents
 * [Description](#description)
+* [Learning Goals](#Learning Goals)
 * [Installation](#installation)
 * [Walkthrough](#walkthrough)
 * [Authors](#authors)
