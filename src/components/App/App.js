@@ -23,7 +23,7 @@ class App extends Component {
        this.setState({ cocktails: data.drinks })
      })
      .catch((error) => {
-       this.setState({ error: error })
+       this.setState({ error: 'OH NO, Something went wrong! Reload page and try again.'})
      })
   }
 
@@ -54,8 +54,8 @@ class App extends Component {
             <h1>Mixed Drinks About Feelings</h1>
             <img src='./heart.png' alt='heart'/>
           </div>
-          <NavLink to='/' className='nav'>Home</NavLink>
-          <NavLink to='/favorites' className='nav'>Favorites</NavLink>
+          <NavLink to='/' className='nav homebtn'>Home</NavLink>
+          <NavLink to='/favorites' className='nav favPageBtn'>Favorites</NavLink>
         </header>
         <main className='main-css'>
           <Switch>
@@ -63,7 +63,7 @@ class App extends Component {
               return (
               <div className='question-display'>
                 <Form getDrink={this.getDrink}/>
-                {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
+                {this.state.cocktails.length < 1 && !this.state.error && <p className='load'> Loading... </p>}
                 {this.state.error && <p className='errorMess'>{this.state.error}</p>}
                 {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
               </div>

@@ -9,7 +9,7 @@ const Drink = ({drink, favoriteDrink}) => {
         <h2>{drink.strDrink}</h2>
       </div>
       <div className='bev-img'>
-        {drink && <img src={drink.strDrinkThumb} alt='drink' />}
+        {drink && <img className='drink-img' src={drink.strDrinkThumb} alt='drink' />}
       </div>
       <button className='favBtn' onClick={() => favoriteDrink(drink.idDrink)}>Favorite</button>
     </article>
