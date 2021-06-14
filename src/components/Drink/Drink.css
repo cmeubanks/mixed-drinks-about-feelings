@@ -44,3 +44,34 @@ div > h2 {
     height: 100%;
   }
 }
+
+@media screen and (max-width: 810px) {
+  .drink {
+    width: 40%;
+    height: 100%;
+  }
+
+  div > h2 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  div > h2 {
+    font-size: 2.8em;
+  }
+
+  .favBtn {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  div > h2 {
+    font-size: 2.2em;
+  }
+
+  .favBtn {
+    font-size: 20px;
+  }
+}

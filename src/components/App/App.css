@@ -77,3 +77,27 @@ h1 {
     font-size: 2.7em;
   }
 }
+
+@media screen and (max-width: 670px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .nav {
+    font-size: 2.3em;
+  }
+
+  .load {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .nav {
+    font-size: 1.8em;
+  }
+}

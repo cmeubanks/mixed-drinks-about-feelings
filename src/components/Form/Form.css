@@ -88,4 +88,45 @@ form {
   .drinkBtn {
     font-size: 40px;
   }
+
+}
+
+@media screen and (max-width: 670px) {
+  .label {
+    font-size: 2.5em;
+  }
+
+  .select {
+    font-size: 25px;
+    border: 6px solid #6D9F71;
+  }
+
+  .drinkBtn {
+    font-size: 25px;
+    border: 6px solid #6D9F71;
+  }
+
+  .drinkBtn:hover {
+    border:6px solid #BC8DA0;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .label {
+    font-size: 2em;
+  }
+
+  .select {
+    font-size: 20px;
+    border: 5px solid #6D9F71;
+  }
+
+  .drinkBtn {
+    font-size: 22px;
+    border: 5px solid #6D9F71;
+  }
+
+  .drinkBtn:hover {
+    border:5px solid #BC8DA0;
+  }
 }
