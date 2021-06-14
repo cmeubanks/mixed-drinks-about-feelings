@@ -63,7 +63,7 @@ class App extends Component {
               return (
               <div className='question-display'>
                 <Form getDrink={this.getDrink}/>
-                {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
+                {this.state.cocktails.length < 1 && !this.state.error && <p className='load'> Loading... </p>}
                 {this.state.error && <p className='errorMess'>{this.state.error}</p>}
                 {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
               </div>
