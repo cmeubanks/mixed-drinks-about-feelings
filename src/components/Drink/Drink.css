@@ -33,7 +33,7 @@ div > h2 {
 }
 
 .faved {
-  color: red;
+  color: #BC8DA0;
 }
 
 @media screen and (max-width: 1440px) {

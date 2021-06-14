@@ -11,12 +11,6 @@ form {
   margin-right: 10px;
 }
 
-
-/* .label span::before {
-  content: "\A";
-  white-space: pre;
-} */
-
 .label {
   font-family: 'Shadows Into Light Two', cursive;
   font-size: 3.5em;
@@ -135,7 +129,7 @@ form {
   .drink {
     width: 50%;
   }
-  
+
   .label {
     font-size: 1.4em;
   }
