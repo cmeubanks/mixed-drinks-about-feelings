@@ -25,13 +25,19 @@ For this project, I was challenged to construct a MVP to the meet the needs of a
 
 *Minimum Viable Product (MVP)*:  Application reccomends a drink based on a user's emotion. The user can input their emotion and a drink is reccomended. User can favortie their reccomended drink and it is added to a favorite's page.
 
-Personas: 
+User Personas: 
+
 https://docs.google.com/document/d/1ozdKCzlF1FDsmvqbA4b-h7gz2u9-fgVNnvJ0m5ZTUFY/edit?usp=sharing
 https://docs.google.com/document/d/1c5JSCzOKStRWSLuFhrgALXNLqbehTxvsVqpm5CafQ_Y/edit?usp=sharing
 
 
 ## Notable Features
 
+- Data fetched from CocktailBD API: https://www.thecocktaildb.com/api.php?ref=apilist.fun
+- Cypress Testing
+- React Class & Functional Components
+- React Router for Navigation aid
+- Proptypes
 
 
 ## Installation
@@ -48,7 +54,11 @@ https://docs.google.com/document/d/1c5JSCzOKStRWSLuFhrgALXNLqbehTxvsVqpm5CafQ_Y/
 
 ## Walkthrough
 
-API Incorporate: https://www.thecocktaildb.com/api.php?ref=apilist.fun
+1) To utilize the application, select your mood from the form input (which you see on page load). 
+2) Click the "get drink" button once you have input your mood
+3) A drink reccomendation will display based on your mood
+4) If you like the reccomendation, click the 'favorite' button
+5) To view your favorited drinks, select the 'Favorites' navigation button
 
 
 ## Authors
