@@ -7,21 +7,21 @@ const Drink = ({drink, favoriteDrink, favDrinks}) => {
     if (favDrinks) {
       const faved = favDrinks.filter(fave => fave.idDrink === drink.idDrink)
       if (faved.length > 0) {
-        return ‘favBtn faved’
+        return 'favBtn faved'
       }
     }
-    return ‘favBtn’
+    return 'favBtn'
   }
 
   return (
     <article className='drink' id={drink.idDrink}>
-      <div heading-container>
+      <div>
         <h2>{drink.strDrink}</h2>
       </div>
       <div className='bev-img'>
         {drink && <img className='drink-img' src={drink.strDrinkThumb} alt='drink' />}
       </div>
-      <button className={this.styleFavorite} onClick={() => favoriteDrink(drink.idDrink)}>Favorite</button>
+      <button className={styleFavorite()} onClick={() => favoriteDrink(drink.idDrink)}>Favorite</button>
     </article>
   )
 }
