@@ -7,7 +7,7 @@ describe('Emotion Question View', () => {
 
   describe('Favorite Drink User Flow', () => {
 
-    it('After a drink is is reccomended, user can favorite drink to be added to a new view', () => {
+    it('After a drink is is recomended, user can favorite drink to be added to a new view', () => {
       cy.get('.select')
         .select('happy')
       .get('.drinkBtn')

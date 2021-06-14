@@ -23,7 +23,7 @@ class App extends Component {
        this.setState({ cocktails: data.drinks })
      })
      .catch((error) => {
-       this.setState({ error: error })
+       this.setState({ error: 'OH NO, Something went wrong! Reload page and try again.'})
      })
   }
 
