@@ -43,5 +43,11 @@ describe('Error Handling', () => {
         .get('.errorMess')
           .contains('Choose valid emotion')
     })
+
+    it('should display a message if user visits favorites page without adding a favorite drink', () => {
+      cy.visit('http://localhost:3000/favorites')
+        .get('.fav-error')
+          .contains("Aren't you thirsty?")
+    })
   })
 });
