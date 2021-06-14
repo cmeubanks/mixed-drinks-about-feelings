@@ -15,7 +15,7 @@ describe('Emotion Question View', () => {
       .get('.favBtn')
         .click()
       .get('.select')
-        .select('sad')
+        .select('melancholy')
       .get('.drinkBtn')
         .click()
       .get('.favBtn')
@@ -28,15 +28,23 @@ describe('Emotion Question View', () => {
         .contains('Orange Rosemary Collins')
     });
 
-    it('should header elements on favorites page', () => {
-      .get('.favPageBtn')
+    it('should display header elements on favorites page', () => {
+      cy.get('.favPageBtn')
         .click()
+      .get('h1')
+        .contains('Mixed Drinks About Feelings')
+      .get('.homebtn')
+        .contains('Home')
+      .get('.favPageBtn')
+        .contains('Favorites')
     });
 
     it('should display a new url path when favorites page is selected', () => {
-      .get('.favPageBtn')
+      cy.get('.favPageBtn')
         .click()
       .url().should('eq', 'http://localhost:3000/favorites')
+      .get('.fav-error')
+        .contains("Aren't you thirsty?")
     });
 
     it('should display all article elements when a drink is added to favorites view', () => {
@@ -55,7 +63,22 @@ describe('Emotion Question View', () => {
       .get('.favBtn')
         .contains('Favorite')
     });
+  });
 
-    it('should navigate home when home button is selected')
+  describe('Navigation User Flow', () => {
+
+    it('should navigate home when home button is selected', () => {
+      cy.url().should('eq', 'http://localhost:3000/')
+      .get('.favPageBtn')
+        .click()
+        .url().should('eq', 'http://localhost:3000/favorites')
+      .get('.fav-error')
+        .contains("Aren't you thirsty?")
+      .get('.homebtn')
+        .click()
+        .url().should('eq', 'http://localhost:3000/')
+      .get('.label')
+        .contains('How are you feeling today:')
+    })
   });
 });
