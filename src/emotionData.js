@@ -5,7 +5,7 @@ const emotions = [
     id: 0
   },
   {
-    name: 'spontanious',
+    name: 'spontaneous',
     drink: '155 Belmont',
     id: 15346
   },
@@ -60,7 +60,7 @@ const emotions = [
     id: 17224
   },
   {
-    name: 'wreckless',
+    name: 'reckless',
     drink: 'Absolutly Screwed Up',
     id: 16134
   },

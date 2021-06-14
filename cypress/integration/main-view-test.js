@@ -35,8 +35,8 @@ describe('Main Page View', () => {
         .select('melancholy')
         .should('have.value', 'melancholy')
       .get('.select')
-        .select('spontanious')
-        .should('have.value', 'spontanious')
+        .select('spontaneous')
+        .should('have.value', 'spontaneous')
     })
 
     it('should display a drink from fetched data when an emotion is submitted', () => {
