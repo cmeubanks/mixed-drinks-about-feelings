@@ -1,5 +1,5 @@
 .drink {
-  width: 25%;
+  width: 40%;
   height: 100%;
   margin: 10px 15px 10px 15px;
 }
@@ -10,9 +10,14 @@
   border: 10px solid white;
 }
 
-.drink > h2 {
+.heading-container {
+  width: 25%;
+  height: 100%;
+}
+
+div > h2 {
   font-family: 'Londrina Outline', cursive;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: bolder;
   color: #6D9F71;
 }
@@ -25,4 +30,17 @@
   padding: 8px 8px 8px 8px;
   color: #6D9F71;
   border:5px solid #6D9F71;
+}
+
+@media screen and (max-width: 1440px) {
+  div > h2 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .drink {
+    width: 35%;
+    height: 100%;
+  }
 }

@@ -52,7 +52,7 @@ form {
 	max-width: 100%;
 	box-sizing: border-box;
 	margin-top: 40px;
-	border: 10px solid #BC8DA0;
+	border: 10px solid #6D9F71;
 	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
 	border-radius: .5em;
 	background-color: transparent;
@@ -63,10 +63,10 @@ form {
 	display: none;
 }
 .select:hover {
-	border-color: #6D9F71;
+	border-color: #BC8DA0;
 }
 .select:focus {
-	border-color: #6D9F71;
+	border-color: #BC8DA0;
 	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
 	color: #337357;
@@ -74,4 +74,18 @@ form {
 }
 .select option {
 	font-weight:normal;
+}
+
+@media screen and (max-width: 810px) {
+  .label {
+    font-size: 3.3em;
+  }
+
+  .select {
+    font-size: 30px;
+  }
+
+  .drinkBtn {
+    font-size: 40px;
+  }
 }

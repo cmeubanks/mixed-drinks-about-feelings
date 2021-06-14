@@ -12,3 +12,18 @@
   color: #6D9F71;
   text-align: center;
 }
+
+@media screen and (max-width: 965px) {
+  .cocktails {
+    padding: 30px 30px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .cocktails {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+}

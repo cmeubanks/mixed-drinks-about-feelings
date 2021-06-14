@@ -58,5 +58,22 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 965px) {
+  h1 {
+    font-size: 4.2em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  h1 {
+    font-size: 3.4em;
+  }
+
+  .nav {
+    font-size: 2.7em;
+  }
 }
