@@ -1,4 +1,4 @@
-describe('Emotion Question View', () => {
+describe('Main Page View', () => {
 
 
   beforeEach(() => {
