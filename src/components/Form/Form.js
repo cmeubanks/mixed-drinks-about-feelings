@@ -28,17 +28,18 @@ class Form extends Component {
       )
     })
     return (
-    <div className='form-container'>
       <form>
+      <div className='question-container'>
         <label className='label'>
           How are you <span>feeling today:</span>
           <select className='select' value={this.state.value} onChange={this.handleChange}>
             {dropDown}
           </select>
         </label>
+        </div>
+        <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
       </form>
-      <button className='drinkBtn' onClick={event => this.submitMood(event)}>Get Drink</button>
-    </div>
+
     )
   }
 }

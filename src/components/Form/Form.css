@@ -1,20 +1,25 @@
-.form-container {
+form {
   display: flex;
   justify-content: center;
-}
-
-form {
   box-sizing: border-box;
+  align-items: flex-end;
 }
 
-.label span::before {
+.question-container {
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+
+/* .label span::before {
   content: "\A";
   white-space: pre;
-}
+} */
 
 .label {
   font-family: 'Shadows Into Light Two', cursive;
-  font-size: 5em;
+  font-size: 3.5em;
   box-sizing: border-box;
   color: #BC8DA0;
 }
@@ -23,9 +28,8 @@ form {
   font-family: 'Shadows Into Light Two', cursive;
   background-color: transparent;
   border-radius: 100px;
-  margin-top: 200px;
-  width: 20%;
   height: 20%;
+  margin-left: 10px;
   font-size: 50px;
   color: #6D9F71;
   border:10px solid #6D9F71;
@@ -48,7 +52,7 @@ form {
 	max-width: 100%;
 	box-sizing: border-box;
 	margin-top: 40px;
-	border: 10px solid #BC8DA0;
+	border: 10px solid #6D9F71;
 	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
 	border-radius: .5em;
 	background-color: transparent;
@@ -59,10 +63,10 @@ form {
 	display: none;
 }
 .select:hover {
-	border-color: #6D9F71;
+	border-color: #BC8DA0;
 }
 .select:focus {
-	border-color: #6D9F71;
+	border-color: #BC8DA0;
 	box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
 	color: #337357;
@@ -70,4 +74,83 @@ form {
 }
 .select option {
 	font-weight:normal;
+}
+
+@media screen and (max-width: 810px) {
+  .label {
+    font-size: 3.3em;
+  }
+
+  .select {
+    font-size: 30px;
+  }
+
+  .drinkBtn {
+    font-size: 40px;
+  }
+
+}
+
+@media screen and (max-width: 670px) {
+  .label {
+    font-size: 2.5em;
+  }
+
+  .select {
+    font-size: 25px;
+    border: 6px solid #6D9F71;
+  }
+
+  .drinkBtn {
+    font-size: 25px;
+    border: 6px solid #6D9F71;
+  }
+
+  .drinkBtn:hover {
+    border:6px solid #BC8DA0;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .label {
+    font-size: 2em;
+  }
+
+  .select {
+    font-size: 20px;
+    border: 5px solid #6D9F71;
+  }
+
+  .drinkBtn {
+    font-size: 22px;
+    border: 5px solid #6D9F71;
+  }
+
+  .drinkBtn:hover {
+    border:5px solid #BC8DA0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .drink {
+    width: 50%;
+  }
+  
+  .label {
+    font-size: 1.4em;
+  }
+
+  .select {
+    font-size: 15px;
+    border: 5px solid #6D9F71;
+  }
+
+  .drinkBtn {
+    font-size: 18px;
+    border: 4px solid #6D9F71;
+  }
+
+  .drinkBtn:hover {
+    border:4px solid #BC8DA0;
+  }
 }

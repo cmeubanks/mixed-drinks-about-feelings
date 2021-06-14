@@ -61,7 +61,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={() => {
               return (
-              <div className='drink-container'>
+              <div className='question-display'>
                 <Form getDrink={this.getDrink}/>
                 {this.state.cocktails.length < 1 && <p className='load'> Loading... </p>}
                 {this.state.error && <p className='errorMess'>{this.state.error}</p>}

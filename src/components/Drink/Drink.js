@@ -5,7 +5,9 @@ import './Drink.css';
 const Drink = ({drink, favoriteDrink}) => {
   return (
     <article className='drink' id={drink.idDrink}>
-      <h2>{drink.strDrink}</h2>
+      <div heading-container>
+        <h2>{drink.strDrink}</h2>
+      </div>
       <div className='bev-img'>
         {drink && <img src={drink.strDrinkThumb} alt='drink' />}
       </div>

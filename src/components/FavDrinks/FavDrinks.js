@@ -16,7 +16,7 @@ const FavDrinks = ({favDrinks, favoriteDrink}) => {
 
   return(
     <div className='cocktails'>
-      {!cocktails.length && <p> Aren't you thirsty? </p>}
+      {!cocktails.length && <p className='fav-error'> Aren't you thirsty? </p>}
       {cocktails}
     </div>
   )

@@ -1,5 +1,35 @@
 .cocktails {
-  width: 80%;
+  width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+}
+
+.fav-error {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 3em;
+  font-weight: bolder;
+  color: #6D9F71;
+  text-align: center;
+}
+
+@media screen and (max-width: 965px) {
+  .cocktails {
+    padding: 30px 30px 30px 30px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .cocktails {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .fav-error {
+    font-size: 2.5em;
+  }
 }

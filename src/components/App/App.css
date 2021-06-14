@@ -2,7 +2,7 @@
   min-height: 100vh;
   background-image: url("./whitecloud.png");
   background-position: center;
-  background-size: 300px;
+  background-size: 30%;
 }
 
 .App {
@@ -54,8 +54,60 @@ h1 {
   color: #6D9F71;
 }
 
-.drink-container {
+.question-display {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 965px) {
+  h1 {
+    font-size: 4.2em;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  h1 {
+    font-size: 3.4em;
+  }
+
+  .nav {
+    font-size: 2.7em;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  .nav {
+    font-size: 2.3em;
+  }
+
+  .load {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  .nav {
+    font-size: 1.8em;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .nav {
+    font-size: 1.5em;
+  }
 }
