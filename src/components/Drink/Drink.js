@@ -34,5 +34,10 @@ Drink.propTypes = {
    idDrink: PropTypes.string,
    strDrink: PropTypes.string,
    strDrinkThumb: PropTypes.string
- }).isRequired
+    }).isRequired,
+ favDrinks: PropTypes.arrayOf(PropTypes.shape({
+   idDrink: PropTypes.string,
+   strDrink: PropTypes.string,
+   strDrinkThumb: PropTypes.string
+    })).isRequired
 }
