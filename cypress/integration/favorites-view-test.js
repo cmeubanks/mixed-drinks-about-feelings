@@ -55,5 +55,7 @@ describe('Emotion Question View', () => {
       .get('.favBtn')
         .contains('Favorite')
     });
+
+    it('should navigate home when home button is selected')
   });
 });
