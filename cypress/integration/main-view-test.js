@@ -53,7 +53,7 @@ describe('Emotion Question View', () => {
         .contains('Favorite')
     })
 
-    it('should display a different drink when a new emotion is selecte', () => {
+    it('should display a different drink when a new emotion is selected', () => {
       cy.get('.select')
         .select('sad')
         .should('have.value', 'sad')

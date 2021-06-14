@@ -27,5 +27,22 @@ describe('Emotion Question View', () => {
       .get('#178318').get('h2')
         .contains('Orange Rosemary Collins')
     });
+
+    it('should display all article elements when a drink is added to favorites view', () => {
+      cy.get('.select')
+        .select('happy')
+      .get('.drinkBtn')
+        .click()
+      .get('.favBtn')
+        .click()
+      .get('.favPageBtn')
+        .click()
+      .get('#14029').get('h2')
+        .contains('Old Pal')
+      .get('.drink-img')
+        .should('have.attr', 'src', 'https://www.thecocktaildb.com/images/media/drink/x03td31521761009.jpg')
+      .get('.favBtn')
+        .contains('Favorite')
+    });
   });
 });
