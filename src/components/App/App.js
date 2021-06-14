@@ -1,8 +1,9 @@
 import './App.css';
 import React, { Component } from 'react';
-import { Route, NavLink, Switch, Redirect} from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 import apiCalls from '../../apiCalls.js';
 import emotions from '../../emotionData.js';
+import Header from '../Header/Header.js';
 import Drink from '../Drink/Drink.js';
 import Form from '../Form/Form.js';
 import FavDrinks from '../FavDrinks/FavDrinks.js';
@@ -49,14 +50,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <div className='title'>
-            <h1>Mixed Drinks About Feelings</h1>
-            <img src='./heart.png' alt='heart'/>
-          </div>
-          <NavLink to='/' className='nav homebtn'>Home</NavLink>
-          <NavLink to='/favorites' className='nav favPageBtn'>Favorites</NavLink>
-        </header>
+        <Header />
         <main className='main-css'>
           <Switch>
             <Route exact path="/" render={() => {
@@ -65,7 +59,7 @@ class App extends Component {
                 <Form getDrink={this.getDrink}/>
                 {this.state.cocktails.length < 1 && !this.state.error && <p className='load'> Loading... </p>}
                 {this.state.error && <p className='errorMess'>{this.state.error}</p>}
-                {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink}/>}
+                {this.state.drink && <Drink drink={this.state.drink} favoriteDrink={this.favoriteDrink} favDrinks={this.state.favorites}/>}
               </div>
               )
             }} />

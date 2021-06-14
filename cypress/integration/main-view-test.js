@@ -1,4 +1,4 @@
-describe('Emotion Question View', () => {
+describe('Main Page View', () => {
 
 
   beforeEach(() => {
@@ -8,14 +8,14 @@ describe('Emotion Question View', () => {
   describe('Page Load User Flow', () => {
 
     it('should be able to visit the page and render the correct elements', () => {
-      cy.get('.load')
-          .contains('Loading...')
-        .get('h1')
+        cy.get('h1')
           .contains('Mixed Drinks About Feelings')
         .get('.homebtn')
           .contains('Home')
         .get('.favPageBtn')
-            .contains('Favorites')
+          .contains('Favorites')
+        .get('.load')
+          .contains('Loading...')
         .get('.label')
           .contains('How are you feeling today:')
         .get('.select')
@@ -32,11 +32,11 @@ describe('Emotion Question View', () => {
         .select('happy')
         .should('have.value', 'happy')
       .get('.select')
-        .select('sad')
-        .should('have.value', 'sad')
+        .select('melancholy')
+        .should('have.value', 'melancholy')
       .get('.select')
-        .select('confused')
-        .should('have.value', 'confused')
+        .select('spontaneous')
+        .should('have.value', 'spontaneous')
     })
 
     it('should display a drink from fetched data when an emotion is submitted', () => {
@@ -55,8 +55,8 @@ describe('Emotion Question View', () => {
 
     it('should display a different drink when a new emotion is selected', () => {
       cy.get('.select')
-        .select('sad')
-        .should('have.value', 'sad')
+        .select('melancholy')
+        .should('have.value', 'melancholy')
       .get('.drinkBtn')
         .click()
       .get('article').get('h2')

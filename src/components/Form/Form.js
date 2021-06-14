@@ -31,7 +31,7 @@ class Form extends Component {
       <form>
       <div className='question-container'>
         <label className='label'>
-          How are you <span>feeling today:</span>
+          How are you feeling today:
           <select className='select' value={this.state.value} onChange={this.handleChange}>
             {dropDown}
           </select>

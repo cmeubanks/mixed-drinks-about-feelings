@@ -10,6 +10,7 @@ const FavDrinks = ({favDrinks, favoriteDrink}) => {
         key={cocktail.idDrink}
         drink={cocktail}
         favoriteDrink={favoriteDrink}
+        favDrinks={favDrinks}
       />
     )
   })
