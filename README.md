@@ -1,4 +1,5 @@
-# Mixed Drinks About Feelings
+# Mixed Drinks About Feelings 
+[View Live Application Here](https://mixeddrinksaboutfeelings.herokuapp.com/)
 
 ## Table of Contents
 * [Description](#description)
@@ -15,18 +16,22 @@ Calling all beverage (and even non-beverage) enthusiasts. Are you tired of askin
 
 ## Learning Goals
 
-For this project, I was challenged to create a fully functionation front-end application in 6 days that implements the following learning goals:
+For this project, I was challenged to construct a MVP to the meet the needs of a niche audience, and implement the following learning goals (in 6 days!):
 
 - React
 - Router
 - Asynchronous JavaScript
 - End to end testing with Cypress
 
-*Minimum Viable Product*:  Application reccomends a drink based on a user's emotion. The user can input their emotion and a drink is reccomended. User can favortie their reccomended drink and it is added to a favorite's page.
+*Minimum Viable Product (MVP)*:  Application reccomends a drink based on a user's emotion. The user can input their emotion and a drink is reccomended. User can favortie their reccomended drink and it is added to a favorite's page.
 
+Personas: 
+https://docs.google.com/document/d/1ozdKCzlF1FDsmvqbA4b-h7gz2u9-fgVNnvJ0m5ZTUFY/edit?usp=sharing
+https://docs.google.com/document/d/1c5JSCzOKStRWSLuFhrgALXNLqbehTxvsVqpm5CafQ_Y/edit?usp=sharing
 
 
 ## Notable Features
+
 
 
 ## Installation
