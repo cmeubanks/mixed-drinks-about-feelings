@@ -14,7 +14,7 @@ describe('Emotion Question View', () => {
           .contains('Mixed Drinks About Feelings')
         .get('.homebtn')
           .contains('Home')
-        .get('.favbtn')
+        .get('.favPageBtn')
             .contains('Favorites')
         .get('.label')
           .contains('How are you feeling today:')
