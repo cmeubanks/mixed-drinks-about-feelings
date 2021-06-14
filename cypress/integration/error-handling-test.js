@@ -49,5 +49,21 @@ describe('Error Handling', () => {
         .get('.fav-error')
           .contains("Aren't you thirsty?")
     })
+
+    it('should prevent a user from adding duplicate favorite drinks', () => {
+      cy.get('.select')
+        .select('happy')
+      .get('.drinkBtn')
+        .click()
+      .get('.favBtn')
+        .click()
+        .click()
+        .click()
+      .get('.favPageBtn')
+        .click()
+      .get('h2')
+        .contains('Old Pal')
+      .get('.drink').should('have.length', 1)
+    })
   })
 });
