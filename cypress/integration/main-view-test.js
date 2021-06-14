@@ -32,11 +32,11 @@ describe('Emotion Question View', () => {
         .select('happy')
         .should('have.value', 'happy')
       .get('.select')
-        .select('sad')
-        .should('have.value', 'sad')
+        .select('melancholy')
+        .should('have.value', 'melancholy')
       .get('.select')
-        .select('confused')
-        .should('have.value', 'confused')
+        .select('spontanious')
+        .should('have.value', 'spontanious')
     })
 
     it('should display a drink from fetched data when an emotion is submitted', () => {
@@ -55,8 +55,8 @@ describe('Emotion Question View', () => {
 
     it('should display a different drink when a new emotion is selected', () => {
       cy.get('.select')
-        .select('sad')
-        .should('have.value', 'sad')
+        .select('melancholy')
+        .should('have.value', 'melancholy')
       .get('.drinkBtn')
         .click()
       .get('article').get('h2')
