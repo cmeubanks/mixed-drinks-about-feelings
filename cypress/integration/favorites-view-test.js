@@ -28,6 +28,17 @@ describe('Emotion Question View', () => {
         .contains('Orange Rosemary Collins')
     });
 
+    it('should header elements on favorites page', () => {
+      .get('.favPageBtn')
+        .click()
+    });
+
+    it('should display a new url path when favorites page is selected', () => {
+      .get('.favPageBtn')
+        .click()
+      .url().should('eq', 'http://localhost:3000/favorites')
+    });
+
     it('should display all article elements when a drink is added to favorites view', () => {
       cy.get('.select')
         .select('happy')
