@@ -98,7 +98,9 @@ https://docs.google.com/document/d/1c5JSCzOKStRWSLuFhrgALXNLqbehTxvsVqpm5CafQ_Y/
 ## Demos
 
 * Application in Use
+
 ![](https://media.giphy.com/media/8H26NzJy8uZArSj0nd/giphy.gif)
 
 * Favoriting
+
 ![](https://media.giphy.com/media/NeSjWqZ1VhCU2d9dls/giphy.gif)
