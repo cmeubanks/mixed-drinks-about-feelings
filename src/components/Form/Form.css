@@ -26,6 +26,7 @@ form {
   margin-left: 10px;
   font-size: 50px;
   color: #6D9F71;
+  padding: 8px 8px 8px 8px;
   border:10px solid #6D9F71;
 }
 
@@ -141,6 +142,26 @@ form {
 
   .drinkBtn {
     font-size: 18px;
+    border: 4px solid #6D9F71;
+  }
+
+  .drinkBtn:hover {
+    border:4px solid #BC8DA0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .label {
+    font-size: 1.3em;
+  }
+
+  .select {
+    font-size: 15px;
+    border: 5px solid #6D9F71;
+  }
+
+  .drinkBtn {
+    font-size: 15px;
     border: 4px solid #6D9F71;
   }
 

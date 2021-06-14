@@ -8,14 +8,14 @@ describe('Main Page View', () => {
   describe('Page Load User Flow', () => {
 
     it('should be able to visit the page and render the correct elements', () => {
-      cy.get('.load')
-          .contains('Loading...')
-        .get('h1')
+        cy.get('h1')
           .contains('Mixed Drinks About Feelings')
         .get('.homebtn')
           .contains('Home')
         .get('.favPageBtn')
-            .contains('Favorites')
+          .contains('Favorites')
+        .get('.load')
+          .contains('Loading...')
         .get('.label')
           .contains('How are you feeling today:')
         .get('.select')

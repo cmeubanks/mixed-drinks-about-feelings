@@ -79,3 +79,13 @@ h1 {
     font-size: 1.5em;
   }
 }
+
+  @media screen and (max-width: 320px) {
+    h1 {
+      font-size: 1.5em;
+    }
+
+    .nav {
+      font-size: 1.3em;
+    }
+}

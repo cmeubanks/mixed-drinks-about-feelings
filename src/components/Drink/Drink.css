@@ -1,5 +1,5 @@
 .drink {
-  width: 40%;
+  width: 30%;
   height: 100%;
   margin: 10px 15px 10px 15px;
 }
@@ -77,5 +77,15 @@ div > h2 {
 
   .favBtn {
     font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  div > h2 {
+    font-size: 1.8em;
+  }
+
+  .favBtn {
+    font-size: 16px;
   }
 }
