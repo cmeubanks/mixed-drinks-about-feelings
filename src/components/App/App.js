@@ -54,8 +54,8 @@ class App extends Component {
             <h1>Mixed Drinks About Feelings</h1>
             <img src='./heart.png' alt='heart'/>
           </div>
-          <NavLink to='/' className='nav'>Home</NavLink>
-          <NavLink to='/favorites' className='nav'>Favorites</NavLink>
+          <NavLink to='/' className='nav homebtn'>Home</NavLink>
+          <NavLink to='/favorites' className='nav favbtn'>Favorites</NavLink>
         </header>
         <main className='main-css'>
           <Switch>

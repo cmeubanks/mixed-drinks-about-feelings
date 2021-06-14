@@ -62,6 +62,13 @@ h1 {
   margin-top: 20px;
 }
 
+.errorMess {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 4em;
+  font-weight: bolder;
+  color: #6D9F71;
+}
+
 @media screen and (max-width: 965px) {
   h1 {
     font-size: 4.2em;
