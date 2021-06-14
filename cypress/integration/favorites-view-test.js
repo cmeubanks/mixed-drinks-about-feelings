@@ -22,6 +22,10 @@ describe('Emotion Question View', () => {
         .click()
       .get('.favPageBtn')
         .click()
+      .get('#14029').get('h2')
+        .contains('Old Pal')
+      .get('#178318').get('h2')
+        .contains('Orange Rosemary Collins')
     });
   });
 });
